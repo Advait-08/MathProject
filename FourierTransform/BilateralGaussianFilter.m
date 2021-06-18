@@ -1,8 +1,0 @@
-%bilateral gaussian filter
-candy = imread('images (3).jpg');
-psf = fspecial('disk',10);candy_recover = deconvwnr(candy,psf,0.01);
-candy_recover2 = imbilatfilt(candy_recover,100,5);
-figure
-subplot(1,3,1),imshow(candy),title('blured image')
-subplot(1,3,2),imshow(candy_recover),title('Restored image')
-subplot(1,3,3),imshow(candy_recover2),title('Restored image after smoothing')
